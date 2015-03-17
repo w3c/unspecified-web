@@ -65,6 +65,32 @@
       <p>
         This section is for unspecified features to do with APIs and scripting in general.
       </p>
+      <section>
+        <h2><code>window.find()</code></h2>
+        <p>
+          This method finds a string in the DOM in the same way that the browser’s find
+          functionality does. Its design is somewhat horrible but it is used by actual libraries and
+          code in the wild.
+        </p>
+        <p>
+          There is some <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Window/find">documentation</a> on
+          MDN, as well as an <a
+          href="https://bugzilla.mozilla.org/show_bug.cgi?id=672395">interesting bug</a> on the
+          topic. IE has it as <a
+          href="https://msdn.microsoft.com/en-us/library/ms536422.aspx"><code>findText()</code></a>.
+        </p>
+        <p>
+          This should:
+        </p>
+        <ol>
+          <li>Be specified sufficiently to be interoperable and work with existing content.</li>
+          <li>
+            Be complemented with a more modern API able to find <code>Range</code>s based on a
+            search string.
+          </li>
+        </ol>
+      </section>
     </section>
 
     <section>
